@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+  </head>
+  <script src='javascripts/jquery.min.js'></script>
+   <script>
+     var socket = new WebSocket('ws://localhost:3001/');
+     socket.onmessage = function(data){
+       $('#body').append('<p>'+data.data+'</p>');
+     }
+   </script>
+	<body id='body'>
+	</body>
+</html>
